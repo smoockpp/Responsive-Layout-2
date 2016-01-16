@@ -1,0 +1,358 @@
+/* ================================= 
+  Base Element Styles
+==================================== */
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Roboto', sans-serif;
+	font-weight: 300;
+	line-height: 1.6;
+	text-align: center;
+	color: #3a3a3a;
+	background-color: #fafafa;
+}
+
+p {
+	font-size: 1em;
+	color: #252839;
+}
+
+h1,
+h2,
+h3,
+h4 {
+	margin-top: 0;
+	color: #252839;
+}
+
+
+a {
+	color: #f2b632;
+}
+
+a {
+	text-decoration: none;
+}
+
+img {
+	max-width: 100%;
+}
+
+
+
+/* ================================= 
+  Base Layout Styles
+==================================== */
+
+/* ---- Navigation ---- */
+
+.main-header {
+	text-align: center;
+	background-color: #252839;
+	padding-bottom: 1.25em;
+	padding-top: 1.25em;
+	box-shadow: 0 2px 1px rgba(0, 0, 0, .4);
+	margin-bottom: 2.5em;
+}
+
+.main-header p {
+	color: #fff;
+}
+
+.name {
+	font-size: 2.5em;
+	margin: 0;	
+}
+
+
+.main-nav {
+	margin: .5em auto 0;
+	width: 90%;
+
+}
+
+.name a,
+.main-nav a {
+	display: block;
+	padding: 10px 15px;
+}
+
+.main-nav a {
+	font-weight: bold;
+	font-size: 1em;
+	margin-top: 5px;
+	background-color:  rgba(255, 255, 255, 0.3);
+}
+
+.main-nav a:hover {
+	color: #fff;
+}
+
+
+/* ---- Layout Containers ---- */
+
+
+.main-student {
+	width: 90%;
+	margin: 3em auto;
+}
+
+.profile-image {
+	max-width: 100%;
+	border-top: 10px solid #f2b632;
+	box-shadow: 2px 2px 1px rgba(255, 255, 255, .3);
+  	border-radius: 10px 20px;
+}
+
+#gallery h2 {
+	font-weight: normal;
+	margin-top: 1.75rem;
+	margin-bottom: 2rem;
+}
+
+ul#gallery {
+  margin: 0; 
+  padding: 0;
+  list-style: none;
+}
+
+ul#gallery li {
+  padding-top: 2em;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.portfolio {
+	max-width: 90%;
+	padding-right: 1em;
+	padding-left: 1em;
+	text-align: center;
+	margin: 2.5em auto;
+}
+
+.main-contact {
+	padding: 4em 0;
+	background-color: #677077;
+	margin: 2.5em auto 0;
+}
+
+.main-contact p {
+	font-size: 1.125em;
+	padding-bottom: 1em;
+	color: #fff;
+	width: 90%;
+	margin: 0 auto;
+}
+
+
+
+/* ---- Footer ---- */
+
+.main-footer {
+	width: 100%;
+	background-color: #252839;
+	box-shadow: 0 -2px 1px rgba(0, 0, 0, .4);
+	padding-top: 0.875em;
+	padding-bottom:  0.875em;
+	vertical-align: middle;
+
+}
+
+.main-footer ul {
+	margin-left: .5em;
+	margin-right: .5em;
+}
+
+.main-footer li {
+	vertical-align: middle;
+}
+
+.student-name {
+	float: left;
+	color: #f2b632;
+}
+
+.student-name  p {
+	color: #f2b632;
+	font-weight: bold;
+	font-size: 1.25em;
+}
+
+.top {
+	float: right;
+	color: #f2b632;
+
+}
+
+.top p {
+	margin-top: 1.4375em;
+	margin-bottom: 1.4375em;
+}
+
+.top a {
+	font-size: 1em;
+	font-weight: bold;
+	vertical-align: middle;
+}
+
+.footer-nav {
+	display: none;
+}
+
+.clearfix::after {
+		content: " ";
+		display: table;
+		clear: both;
+	}
+
+/* ================================= 
+  Media Queries
+==================================== */
+
+/* ---- Tablet devices layout ---- */
+
+@media (min-width: 769px) {
+
+	.container {
+		width: 100%;
+		margin: 0 auto;
+	}
+
+	.main-header {
+		border-bottom: solid 3px #f2b632;
+	}
+
+	.main-nav li {
+		display: inline-block;
+	}
+	.main-nav a {
+		background-color: transparent;
+	}
+
+	.main-student {
+		width: 95%;
+
+		margin-left: 2.5%;
+		margin-right: 2.5%;
+	}
+
+	.profile-text {
+		float: left;
+		width: 60%;
+		text-align: left;
+		margin-top: 0;
+		padding-right: 1.5em;
+	}
+
+	.profile-image {
+		float: right;
+		width: 40%;
+	}
+
+	ul#gallery {
+		text-align: center;
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+	ul#gallery li {
+		float: left;
+	  	padding-top: 2em;
+	    width: 45%;
+	    margin-left: 2.5%;
+	    margin-right: 2.5%;
+	}
+
+	ul#gallery li:nth-child(3), ul#gallery li:nth-child(7) {
+		clear: left;
+	}
+
+	ul#gallery li:nth-child(9) {
+		clear: right;
+	}
+
+
+	.main-contact p {
+		width: 60%;
+	}
+
+	li.top  {
+		display: none;
+	}
+
+	.student-name {
+		margin-top: 0.7em;
+		margin-bottom: 0.7em;
+	}
+
+	.main-footer ul.footer-mobile {
+		width: 95%;
+		margin-left: 2.5%;
+		margin-right: 2.5%;
+	}
+
+	.footer-nav {
+		display: block;
+		float: right;
+		margin-top: 1.5em;
+		margin-bottom: 1.5em;
+	}
+
+	.footer-nav li {
+		display: inline-block;
+	}
+
+	.footer-nav a {
+		display: block;
+		padding: 10px 15px;
+		font-weight: bold;
+	}
+
+	.clearfix::after {
+		content: " ";
+		display: table;
+		clear: both;
+	}
+
+}	
+
+/* ---- Desktop sceen layout ---- */
+
+@media (min-width: 1024px) {
+	.container {
+		width: 80%;
+		max-width: 1150px;
+	}
+
+
+
+	.name {
+		float: left;
+		margin-top: .7rem;
+	}
+
+	.main-nav {
+		margin-top: 1.6rem;
+		float: right;
+		display: inline;
+		width: auto;
+	}
+
+	ul#gallery li {
+		width: 31%;
+		margin-left: 1%;
+	    margin-right: 1%;
+	}
+
+	ul#gallery li:nth-child(3) {
+		clear: none;
+	}
+
+	ul#gallery li:nth-child(4), ul#gallery li:nth-child(10) {
+		clear: left;
+	}
+
+}
